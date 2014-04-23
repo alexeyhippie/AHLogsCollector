@@ -23,13 +23,33 @@
 
 + (AHLogsCollector *)logsCollector;
 
-// configuration
+#pragma mark - Configurations
+
+/*
+ Paths to files setters
+ **/
 - (void)setLogsFileName:(NSString *)logsFilePath;
 - (void)setErrorsFileName:(NSString *)errorsFilePath;
 - (void)setCrashesFileName:(NSString *)crashesFilePath;
 
+/*
+ Set maximum amount of records in logs file;
+ Default is 10000 records;
+ **/
 - (void)setLogsFileCapacity:(NSInteger)capacity;
+
+/*
+ Set maximum amount of in-memory logs array;
+ Default value is 1000 records; 
+ When logs exceeds this limit logger will store it to file and reset in-memory array;
+ **/
 - (void)setInMemoryLogsCapacity:(NSInteger)capacity;
+
+/*
+ Set crash handlers to logger handlers; 
+ Allow to store information about crash in logs
+ and detect app crashing on next app running;
+ **/
 - (void)setCrashHandlers;
 
 /*
