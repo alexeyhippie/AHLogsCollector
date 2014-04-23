@@ -56,8 +56,8 @@
 		89B081C119079C4C00D074DF /* AHLogsCollectorExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AHLogsCollectorExampleTests-Info.plist"; sourceTree = "<group>"; };
 		89B081C319079C4C00D074DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89B081C519079C4C00D074DF /* AHLogsCollectorExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHLogsCollectorExampleTests.m; sourceTree = "<group>"; };
-		89B081DF19085ECC00D074DF /* AHLogsCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHLogsCollector.h; sourceTree = "<group>"; };
-		89B081E019085ECC00D074DF /* AHLogsCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHLogsCollector.m; sourceTree = "<group>"; };
+		89B081DF19085ECC00D074DF /* AHLogsCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHLogsCollector.h; path = AHLogsCollector/AHLogsCollector.h; sourceTree = "<group>"; };
+		89B081E019085ECC00D074DF /* AHLogsCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHLogsCollector.m; path = AHLogsCollector/AHLogsCollector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,8 @@
 		89B0819D19079C4C00D074DF /* AHLogsCollectorExample */ = {
 			isa = PBXGroup;
 			children = (
-				89B081DE19085ECC00D074DF /* AHLogsCollector */,
+				89B081DF19085ECC00D074DF /* AHLogsCollector.h */,
+				89B081E019085ECC00D074DF /* AHLogsCollector.m */,
 				89B081A619079C4C00D074DF /* AHAppDelegate.h */,
 				89B081A719079C4C00D074DF /* AHAppDelegate.m */,
 				89B081A919079C4C00D074DF /* Main_iPhone.storyboard */,
@@ -157,15 +158,6 @@
 				89B081C219079C4C00D074DF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		89B081DE19085ECC00D074DF /* AHLogsCollector */ = {
-			isa = PBXGroup;
-			children = (
-				89B081DF19085ECC00D074DF /* AHLogsCollector.h */,
-				89B081E019085ECC00D074DF /* AHLogsCollector.m */,
-			);
-			path = AHLogsCollector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
