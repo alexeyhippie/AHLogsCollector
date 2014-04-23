@@ -22,7 +22,7 @@
 		89B081BC19079C4C00D074DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B0819B19079C4C00D074DF /* UIKit.framework */; };
 		89B081C419079C4C00D074DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89B081C219079C4C00D074DF /* InfoPlist.strings */; };
 		89B081C619079C4C00D074DF /* AHLogsCollectorExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B081C519079C4C00D074DF /* AHLogsCollectorExampleTests.m */; };
-		89B081DD19085DB500D074DF /* AHLogsCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B081DC19085DB500D074DF /* AHLogsCollector.m */; };
+		89B081E119085ECC00D074DF /* AHLogsCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B081E019085ECC00D074DF /* AHLogsCollector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,8 @@
 		89B081C119079C4C00D074DF /* AHLogsCollectorExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AHLogsCollectorExampleTests-Info.plist"; sourceTree = "<group>"; };
 		89B081C319079C4C00D074DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89B081C519079C4C00D074DF /* AHLogsCollectorExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHLogsCollectorExampleTests.m; sourceTree = "<group>"; };
-		89B081DB19085DB500D074DF /* AHLogsCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHLogsCollector.h; sourceTree = "<group>"; };
-		89B081DC19085DB500D074DF /* AHLogsCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHLogsCollector.m; sourceTree = "<group>"; };
+		89B081DF19085ECC00D074DF /* AHLogsCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHLogsCollector.h; sourceTree = "<group>"; };
+		89B081E019085ECC00D074DF /* AHLogsCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHLogsCollector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +117,7 @@
 		89B0819D19079C4C00D074DF /* AHLogsCollectorExample */ = {
 			isa = PBXGroup;
 			children = (
-				89B081DB19085DB500D074DF /* AHLogsCollector.h */,
-				89B081DC19085DB500D074DF /* AHLogsCollector.m */,
+				89B081DE19085ECC00D074DF /* AHLogsCollector */,
 				89B081A619079C4C00D074DF /* AHAppDelegate.h */,
 				89B081A719079C4C00D074DF /* AHAppDelegate.m */,
 				89B081A919079C4C00D074DF /* Main_iPhone.storyboard */,
@@ -158,6 +157,15 @@
 				89B081C219079C4C00D074DF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89B081DE19085ECC00D074DF /* AHLogsCollector */ = {
+			isa = PBXGroup;
+			children = (
+				89B081DF19085ECC00D074DF /* AHLogsCollector.h */,
+				89B081E019085ECC00D074DF /* AHLogsCollector.m */,
+			);
+			path = AHLogsCollector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89B081A419079C4C00D074DF /* main.m in Sources */,
-				89B081DD19085DB500D074DF /* AHLogsCollector.m in Sources */,
+				89B081E119085ECC00D074DF /* AHLogsCollector.m in Sources */,
 				89B081B119079C4C00D074DF /* AHViewController.m in Sources */,
 				89B081A819079C4C00D074DF /* AHAppDelegate.m in Sources */,
 			);
