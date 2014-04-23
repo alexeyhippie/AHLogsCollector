@@ -275,7 +275,13 @@ static NSString * const kAppCrashedKey = @"appCrashed";
         
         NSArray *logsToAdd = self.logs;
         if (logsToAdd) {
-            [storedLogs addObjectsFromArray:logsToAdd];
+            // if logs array contain more records that logs file capacity then
+            // we no need to merge it, just replace with new records
+            if ([logsToAdd count] >= self.logsFileCapacity) {
+                storedLogs = [NSMutableArray arrayWithArray:logsToAdd];
+            } else {
+                [storedLogs addObjectsFromArray:logsToAdd];
+            }
         }
         
         // adjust with capacity
