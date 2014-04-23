@@ -414,6 +414,7 @@ void HandleException(NSException *exception) {
     saveAppCrashed();
     NSString *exceptionString = [logger exceptionToString:exception];
     [logger addAppCrashToCrashesFile:exceptionString];
+    AALog(@"%@", exceptionString);
     [logger saveLogs];
     NSLog(@"%@", exceptionString);
     exit(0);
