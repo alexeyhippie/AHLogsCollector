@@ -7,7 +7,7 @@
 //
 
 #import "AHAppDelegate.h"
-#import "AHLogsCollector/AHLogsCollector.h"
+#import "AHLogsCollector.h"
 
 @implementation AHAppDelegate
 

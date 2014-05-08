@@ -7,7 +7,7 @@
 //
 
 #import "AHViewController.h"
-#import "AHLogsCollector/AHLogsCollector.h"
+#import "AHLogsCollector.h"
 
 @interface AHViewController ()
 
