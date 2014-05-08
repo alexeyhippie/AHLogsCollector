@@ -416,7 +416,9 @@ void HandleException(NSException *exception) {
     [logger addAppCrashToCrashesFile:exceptionString];
     AALog(@"%@", exceptionString);
     [logger saveLogs];
-    NSLog(@"%@", exceptionString);
+    if (!logger.showInConsole) {
+        NSLog(@"%@", exceptionString);
+    }
     exit(0);
 }
 
@@ -426,8 +428,11 @@ void HandleSignal(int signal) {
     saveAppCrashed();
     NSString *backtrace = [NSString stringWithFormat:@"%@\n%@", [NSDate date], [NSThread callStackSymbols]];
     [logger addAppCrashToCrashesFile:backtrace];
+    AALog(@"%@", backtrace);
     [logger saveLogs];
-    NSLog(@"\n%@\n", backtrace);
+    if (!logger.showInConsole) {
+        NSLog(@"\n%@\n", backtrace);
+    }
 }
 
 #pragma mark - Filework
