@@ -19,8 +19,6 @@
 
 #define AALogNSError(error) [logger logError:(error)];
 
-#define format(__FORMAT__, ...) ([NSString stringWithFormat:@"%s [Line %d] %@", __PRETTY_FUNCTION__, __LINE__,[NSString stringWithFormat:__FORMAT__, ##__VA_ARGS__]])
-
 @interface AHLogsCollector : NSObject
 
 + (AHLogsCollector *)logsCollector;
