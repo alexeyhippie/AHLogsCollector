@@ -7,6 +7,24 @@
 
 #import "AHLogsCollector.h"
 
+// Swift macros
+
+AHLogsCollector* logsCollector() {
+    return logger;
+}
+
+void SSLog(NSString* logString) {
+    [logger logString:logString];
+}
+
+void SSLogError(NSString* errorName, NSDictionary* parameters) {
+    AALogError(errorName, parameters);
+}
+
+void SSLogNSError(NSError* error) {
+    AALogNSError(error);
+}
+
 @interface AHLogsCollector ()
 
 @property (nonatomic) NSMutableArray *logsArray;

@@ -19,6 +19,13 @@
 
 #define AALogNSError(error) [logger logError:(error)];
 
+// Swift macros
+@class AHLogsCollector;
+extern AHLogsCollector* logsCollector();
+extern void SSLog(NSString* logString);
+extern void SSLogError(NSString* errorName, NSDictionary* parameters);
+extern void SSLogNSError(NSError* error);
+
 @interface AHLogsCollector : NSObject
 
 + (AHLogsCollector *)sharedInstance;
@@ -113,21 +120,3 @@
 - (BOOL)removeCrashes;
 
 @end
-
-// Swift macros
-
-AHLogsCollector* logsCollector() {
-    return logger;
-}
-
-void SSLog(NSString* logString) {
-    [logger logString:logString];
-}
-
-void SSLogError(NSString* errorName, NSDictionary* parameters) {
-    AALogError(errorName, parameters);
-}
-
-void SSLogNSError(NSError* error) {
-    AALogNSError(error);
-}
