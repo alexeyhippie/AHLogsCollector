@@ -36,7 +36,7 @@ static NSString * const kDefaultCrashesFileName = @"crashes.log";
 
 static NSString * const kAppCrashedKey = @"appCrashed";
 
-+ (AHLogsCollector *)logsCollector {
++ (AHLogsCollector *)sharedInstance {
     static dispatch_once_t pred;
     static AHLogsCollector *logsCollector = nil;
     dispatch_once(&pred, ^{
