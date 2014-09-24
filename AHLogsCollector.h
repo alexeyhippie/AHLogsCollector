@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define logger [AHLogsCollector logsCollector]
+#define logger [AHLogsCollector sharedInstance]
 
 #define AALog(__FORMAT__, ...) [logger logString:([NSString stringWithFormat:@"%s [Line %d] %@\n", __PRETTY_FUNCTION__, __LINE__,[NSString stringWithFormat:__FORMAT__, ##__VA_ARGS__]])];
 
@@ -17,11 +17,11 @@
 
 #define AALogError_c(errorName, parameters, aShowInConsole) [logger logErrorWithName:(errorName) andInfoDict:(parameters) showInConsole:(aShowInConsole)];
 
-#define format(__FORMAT__, ...) ([NSString stringWithFormat:@"%s [Line %d] %@", __PRETTY_FUNCTION__, __LINE__,[NSString stringWithFormat:__FORMAT__, ##__VA_ARGS__]])
+#define AALogNSError(error) [logger logError:(error)];
 
 @interface AHLogsCollector : NSObject
 
-+ (AHLogsCollector *)logsCollector;
++ (AHLogsCollector *)sharedInstance;
 
 #pragma mark - Configurations
 
@@ -113,3 +113,21 @@
 - (BOOL)removeCrashes;
 
 @end
+
+// Swift macros
+
+AHLogsCollector* logsCollector() {
+    return logger;
+}
+
+void SSLog(NSString* logString) {
+    [logger logString:logString];
+}
+
+void SSLogError(NSString* errorName, NSDictionary* parameters) {
+    AALogError(errorName, parameters);
+}
+
+void SSLogNSError(NSError* error) {
+    AALogNSError(error);
+}
